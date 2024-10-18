@@ -1,10 +1,5 @@
-package com.gorakhcodes.config;
+package com.gorakhcodes.consumer;
 
-import javax.jms.Connection;
-import javax.jms.Session;
-import javax.jms.MessageProducer;
-import javax.jms.TextMessage;
-import javax.jms.Queue;
 import javax.jms.ConnectionFactory;
 
 import org.slf4j.Logger;
@@ -14,9 +9,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
-public class SolaceSender {
+public class MessageReceiver {
 
-    private static final Logger log = LoggerFactory.getLogger(SolaceSender.class);
+    private static final Logger log = LoggerFactory.getLogger(MessageReceiver.class);
     @Autowired
     private ConnectionFactory connectionFactory;
 
